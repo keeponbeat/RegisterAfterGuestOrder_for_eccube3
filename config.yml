@@ -1,0 +1,4 @@
+name: ゲスト注文後に会員登録プラグイン
+code: RegisterAfterGuestOrder
+version: 1.0.0
+event: Event

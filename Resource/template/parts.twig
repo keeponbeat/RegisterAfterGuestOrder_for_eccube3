@@ -1,0 +1,47 @@
+{#
+  This file is part of the RegisterAfterGuestOrder plugin
+
+  Copyright (C) 2017 MURAKAMI INTERNATIONAL LLC. All Rights Reserved.
+
+  Website: http://murakami-international.co.jp
+  E-Mail: info@murakami-international.co.jp
+
+  For the full copyright and license information, please view the LICENSE
+  file that was distributed with this source code.
+#}
+
+<div id="plg_register_after_guest_order_message" class="plg_register_after_guest_order_message">
+                    
+  <h2>会員登録をしませんか？</h2>
+  <p>只今ご入力いただいた情報をもとに会員登録ができます。<br />
+  <br />
+  会員登録をすれば、次回以降のお買い物時にフォーム入力を省略できますので、<br />
+  楽々ショッピングができたり、その他、お気に入り機能が使えたり、注文履歴が確認できたり、<br />お得情報がメールで届いたり、ポイントをためたり使ったりできたりと、便利です。<br />
+  <br />
+  会員登録をご希望の場合は、以下フォームにご希望のパスワードを入力し、<br />
+  「会員登録する」ボタンを押してください。<br />
+  <br />
+	その後数分でご注文時にご入力いただきましたメールアドレスに<br />
+  仮会員登録のメールが送信されますので、<br />
+  届いたメールに従って本登録をお願いいたします。</p>
+
+  {{ form_start(form) }}
+  <div class="dl_table" id="form_plg_register_after_guest_order_password">
+    <dl>
+      <dt>{{ form_label(form.plg_register_after_guest_order_password) }} </dt>
+      <dd>
+        {% for passwordField in form.plg_register_after_guest_order_password %}
+        <div class="form-group {% if passwordField.vars.errors is not empty %}has-error{% endif %}">
+          {{ form_widget(passwordField, { type : 'password' }) }}
+          {{ form_errors(passwordField) }}
+        </div>
+        {% endfor %}
+      </dd>
+    </dl>    
+  </div>
+  <div id="plg_register_after_guest_order_send_wrapper">
+    {{ form_widget(form.plg_register_after_guest_order_send) }}
+  </div>
+  {{ form_end(form) }}
+
+</div>

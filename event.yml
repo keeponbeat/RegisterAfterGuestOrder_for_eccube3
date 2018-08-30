@@ -1,0 +1,4 @@
+front.shopping.complete.initialize:
+    - [onFrontShoppingCompleteInit, NORMAL]
+Shopping/complete.twig:
+    - [onShoppingCompleteRender, NORMAL]
